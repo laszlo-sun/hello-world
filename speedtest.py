@@ -1867,8 +1867,6 @@ def shell():
         printer('Ping: %s ms\nDownload: %0.2f M%s/s\n' %
                 (results.ping,
                  (results.download / 1000.0 / 1000.0) / args.units[1],
-                 args.units[0],
-                 (results.upload / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]))
     elif args.csv:
         printer(results.csv(delimiter=args.csv_delimiter))
