@@ -914,7 +914,7 @@ class SpeedtestResults(object):
             'ping=%s' % ping,
             'screenresolution=',
             'promo=',
-            'download=%s' % download,
+            'download=%0.2f M%s/s' % download,
             'screendpi=',
             'upload=%s' % upload,
             'testmethod=http',
