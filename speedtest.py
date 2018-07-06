@@ -1864,7 +1864,7 @@ def shell():
         results.share()
 
     if args.simple:
-        printer('%0.2f M%s/s, %s' %
+        printer('%0.2f M%s/s, %c' %
                 ((results.download / 1000.0 / 1000.0) / args.units[1],
                     args.units[0],
                     datetime.datetime.now()))
