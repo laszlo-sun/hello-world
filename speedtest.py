@@ -1865,7 +1865,7 @@ def shell():
 
     if args.simple:
         printer('%sZ,%0.2f M%s/s' %
-                (datetime.datetime.utcnow().isoformat(),
+                (utc_now.astimezone(timezone('Asia/Tokyo'),
                     (results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]))
     elif args.csv:
