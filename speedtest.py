@@ -1864,8 +1864,9 @@ def shell():
         results.share()
 
     if args.simple:
-        printer('%0.2f M%s/s' %
-                ((results.download / 1000.0 / 1000.0) / args.units[1],
+        printer('%s ,%0.2f M%s/s' %
+                (self.timestamp,
+                    (results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]))
     elif args.csv:
         printer(results.csv(delimiter=args.csv_delimiter))
