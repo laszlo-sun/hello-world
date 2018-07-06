@@ -1864,7 +1864,7 @@ def shell():
         results.share()
 
     if args.simple:
-        printer('%s,%0.2f M%s/s' %,
+        printer('%sZ%0.2f M%s/s' %,
                 (datetime.datetime.utcnow().isoformat(),
                     (results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]))
