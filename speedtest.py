@@ -1865,7 +1865,7 @@ def shell():
 
     if args.simple:
         printer('%s,%0.2f M%s/s' %
-                (datetime.datetime.now(),
+                (datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                     (results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]))
     elif args.csv:
