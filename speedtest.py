@@ -20,6 +20,7 @@ import re
 import csv
 import sys
 import math
+import time
 import errno
 import signal
 import socket
@@ -1864,10 +1865,10 @@ def shell():
         results.share()
 
     if args.simple:
-        printer('%0.2f M%s/s, %c' %
+        printer('%0.2f M%s/s, %s' %
                 ((results.download / 1000.0 / 1000.0) / args.units[1],
                     args.units[0],
-                    datetime.datetime.now()))
+                    time.strftime("%Y-%m-%d %H:%M:%S")))
     elif args.csv:
         printer(results.csv(delimiter=args.csv_delimiter))
     elif args.json:
