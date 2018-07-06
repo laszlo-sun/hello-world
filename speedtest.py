@@ -1864,10 +1864,10 @@ def shell():
         results.share()
 
     if args.simple:
-        printer('%s, %0.2f M%s/s' %
-                (datetime.datetime.now(),
-                    (results.download / 1000.0 / 1000.0) / args.units[1],
-                 args.units[0]))
+        printer('%0.2f M%s/s, %s' %
+                ((results.download / 1000.0 / 1000.0) / args.units[1],
+                    args.units[0],
+                    datetime.datetime.now()))
     elif args.csv:
         printer(results.csv(delimiter=args.csv_delimiter))
     elif args.json:
